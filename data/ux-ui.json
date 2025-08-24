@@ -1,0 +1,7 @@
+[
+  { "title": "Mobile App Interface", "url": "projects/ux-ui/mobile-app-interface/index.html", "description": "Accessible layouts.", "image": "projects/ux-ui/mobile-app-interface/cover.jpg" },
+  { "title": "Dashboard Design", "url": "projects/ux-ui/dashboard-design/index.html", "description": "Data visualization.", "detail": "<p>Charts, filters, and layout grid.</p>", "image": "projects/ux-ui/dashboard-design/cover.jpg" },
+  { "title": "EmPow", "url": "projects/ux-ui/EmPow/index.html", "description": "An App that helps Empower the Youth by helping them in finding opportunities.", "image": "projects/ux-ui/EmPow/cover.jpg" }
+]
+
+

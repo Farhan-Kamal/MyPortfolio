@@ -1,0 +1,7 @@
+[
+  { "title": "E‑commerce Platform", "url": "projects/web-design/ecommerce-platform/index.html", "description": "Responsive storefront.", "image": "projects/web-design/ecommerce-platform/cover.jpg" },
+  { "title": "Portfolio Sites", "url": "projects/web-design/portfolio-sites/index.html", "description": "Clean personal sites.", "image": "projects/web-design/portfolio-sites/cover.jpg" },
+  { "title": "Landing Pages", "url": "projects/web-design/landing-pages/index.html", "description": "Conversion‑first design.", "detail": "<p>Optimized hero, trust signals, and CTAs.</p>", "image": "projects/web-design/landing-pages/cover.jpg" }
+]
+
+

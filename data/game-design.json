@@ -1,0 +1,6 @@
+[
+  { "title": "Synthwave Runner", "url": "../projects/game-design/synthwave-runner/index.html", "description": "Endless runner made in Unity with neon vibes.", "image": "../projects/game-design/synthwave-runner/cover.jpg" },
+  { "title": "Puzzle Grid", "description": "Mobile puzzle prototype with touch gestures.", "detail": "<p>Short demo video and mechanics notes.</p>", "image": "../projects/game-design/puzzle-grid/cover.jpg" }
+]
+
+

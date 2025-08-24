@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Game Design — Farhan Kamal</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header role="banner" aria-label="Primary">
+    <nav class="container" role="navigation" aria-label="Main">
+      <a href="../index.html" class="logo" aria-label="Go to Home">Farhan Kamal</a>
+      <div class="nav-right">
+        <div class="menu">
+          <button class="menu-btn" id="workMenuBtn" aria-haspopup="true" aria-expanded="false" aria-controls="workMenu">Work ▾</button>
+          <div class="menu-list" id="workMenu" role="menu" aria-label="Work categories">
+            <a class="menu-item" role="menuitem" href="../index.html#recent-projects">All Projects</a>
+            <a class="menu-item" role="menuitem" href="graphic-design.html">Graphic Design</a>
+            <a class="menu-item" role="menuitem" href="web-design.html">Web Design</a>
+            <a class="menu-item" role="menuitem" href="ux-ui-design.html">UX/UI</a>
+            <a class="menu-item" role="menuitem" href="game-design.html">Game Design</a>
+          </div>
+        </div>
+        <button class="search-cta" id="openSearchBtn" aria-haspopup="dialog" aria-controls="cmd" aria-label="Open search"><span>Search</span><span class="kbd">/</span></button>
+        <a href="../index.html#connect" class="menu-btn" aria-label="Contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="cmd" class="cmd" hidden>
+    <div class="cmd-panel" role="dialog" aria-modal="true" aria-labelledby="cmdLabel">
+      <div class="cmd-head"><span class="cmd-icon">🔎</span><input type="text" id="cmdInput" placeholder="Search pages & projects…" aria-label="Search input" /><span class="kbd" aria-hidden="true">Esc</span></div>
+      <div id="cmdResults" role="listbox" aria-label="Search results"></div>
+    </div>
+  </div>
+
+  <main>
+    <div id="quickModal" class="modal" hidden>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-head"><div class="modal-title" id="modalTitle"></div><button id="modalClose" class="modal-close" aria-label="Close">✕</button></div>
+        <div id="modalBody" class="modal-body"></div>
+      </div>
+    </div>
+    <div class="page-hero"><div class="container"><h1 class="page-title">Game Design</h1><p class="page-subtitle">Creating immersive gaming experiences</p></div></div>
+    <section>
+      <div class="container">
+        <div id="grid" class="portfolio-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" aria-label="Footer">
+    <div class="container" style="padding: 28px 0; text-align:center; color: var(--muted); font-size: 14px;">Cyber‑minimal redesign inspired by OpenAI, Claude, and classic cyberpunk interfaces.</div>
+  </footer>
+
+  <script src="../assets/js/site.js" data-root="../"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('grid');
+      try {
+        const items = await fetch('../data/game-design.json').then(r => r.json());
+        window.__siteProjects = items;
+        items.forEach(p => grid.appendChild((function(p){
+          const card = document.createElement('a');
+          card.className = 'portfolio-item';
+          card.href = p.url || '#';
+          card.target = p.url && p.url !== '#' ? '_blank' : '_self';
+          card.innerHTML = `
+            <div class="portfolio-image">${p.image ? `<img src="${p.image}" alt="${p.title}">` : 'Preview'}</div>
+            <div class="portfolio-content"><h3 class="project-title">${p.title}</h3><p class="experience-description">${p.description || ''}</p></div>
+          `;
+          card.addEventListener('click', (e) => {
+            if (p.detail && typeof p.detail === 'string') { e.preventDefault(); (function(){ const m = document.getElementById('quickModal'); if (!m) return; const t = document.getElementById('modalTitle'); const b = document.getElementById('modalBody'); t.textContent = p.title; b.innerHTML = p.detail; m.hidden = false; })(); }
+          });
+          return card;
+        })(p)));
+      } catch (e) {
+        grid.innerHTML = '<div style="color:var(--muted)">Failed to load items.</div>';
+        console.error(e);
+      }
+    });
+  </script>
+</body>
+</html>
+
+

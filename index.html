@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farhan Sadeque Kamal - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header role="banner" aria-label="Primary">
+    <nav class="container" role="navigation" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Go to Home">Farhan Kamal</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false"><span class="bars"></span></button>
+      <div class="nav-right">
+        <div class="menu">
+          <button class="menu-btn" id="workMenuBtn" aria-haspopup="true" aria-expanded="false" aria-controls="workMenu">Work ▾</button>
+          <div class="menu-list" id="workMenu" role="menu" aria-label="Work categories">
+            <a class="menu-item" role="menuitem" href="#recent-projects">All Projects</a>
+            <a class="menu-item" role="menuitem" href="pages/graphic-design.html">Graphic Design</a>
+            <a class="menu-item" role="menuitem" href="pages/web-design.html">Web Design</a>
+            <a class="menu-item" role="menuitem" href="pages/ux-ui-design.html">UX/UI</a>
+            <a class="menu-item" role="menuitem" href="pages/game-design.html">Game Design</a>
+          </div>
+        </div>
+
+        <button class="search-cta" id="openSearchBtn" aria-haspopup="dialog" aria-controls="cmd" aria-label="Open search">
+          <span>Search</span>
+          <span class="kbd">/</span>
+        </button>
+
+        <a href="#connect" class="menu-btn" aria-label="Contact">Contact</a>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="popup" role="dialog" aria-modal="true" aria-label="Mobile menu">
+        <div class="popup-header">
+          <div style="font-weight:900">Menu</div>
+          <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+        </div>
+        <div class="popup-content">
+          <div class="mobile-group">Work</div>
+          <a href="#recent-projects" class="mobile-link">All Projects</a>
+          <a href="pages/graphic-design.html" class="mobile-link">Graphic Design</a>
+          <a href="pages/web-design.html" class="mobile-link">Web Design</a>
+          <a href="pages/ux-ui-design.html" class="mobile-link">UX/UI</a>
+          <a href="pages/game-design.html" class="mobile-link">Game Design</a>
+          <div class="mobile-group">Other</div>
+          <button class="mobile-link" onclick="window.location.href='#connect'">Contact</button>
+          <button class="mobile-link" id="mobileSearch">Search</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Command Palette / Search overlay -->
+  <div id="cmd" class="cmd" hidden>
+    <div class="cmd-panel" role="dialog" aria-modal="true" aria-labelledby="cmdLabel">
+      <div class="cmd-head">
+        <span class="cmd-icon">🔎</span>
+        <input type="text" id="cmdInput" placeholder="Search pages & projects… (type to filter)" aria-label="Search input" />
+        <span class="kbd" id="cmdClose" aria-label="Close search" title="Close">Esc</span>
+      </div>
+      <div id="cmdResults" role="listbox" aria-label="Search results"></div>
+    </div>
+  </div>
+
+  <!-- Modal for quick project detail -->
+  <div id="quickModal" class="modal" hidden>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <div class="modal-title" id="modalTitle"></div>
+        <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Home Page -->
+  <main id="home" role="main" aria-label="Home" tabindex="-1">
+    <a id="main"></a>
+
+    <section class="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="hero-heading" style="text-align: center;">
+          <div class="hero-row" aria-hidden="true">
+            <span class="hero-hi">HI</span>
+            <span class="hero-there">THERE</span>
+          </div>
+          <div class="hero-row">
+            <span class="hero-im">I'M</span>
+            <span class="hero-name"><span class="typing-text typing-caret" id="typingText">Farhan Kamal</span></span>
+          </div>
+        </div>
+        <div class="hero-image-content" role="img" aria-label="Morphing gradient animation">
+          <div class="morph-bg" aria-hidden="true">
+            <div class="blob b1"><div class="in"></div></div>
+            <div class="blob b2"><div class="in"></div></div>
+            <div class="blob b3"><div class="in"></div></div>
+            <div class="blob b4"><div class="in"></div></div>
+            <div class="blob b5"><div class="in"></div></div>
+          </div>
+        </div>
+        <div class="hero-about" style="text-align: center; margin-top: 32px;">
+          <p class="hero-description" style="font-size: 18px; color: var(--muted); max-width: 600px; margin: 0 auto; line-height: 1.6;">
+            I'm a passionate developer and designer focused on creating innovative digital experiences. 
+            From game development to web design, I love bringing creative ideas to life through code and design.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (Recent) -->
+    <section class="projects-section" id="recent-projects" aria-label="Recent Projects">
+      <div class="bg-glow cyan left" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-eyebrow">Work</div>
+        <h2 class="section-title">Recent Projects</h2>
+        <p class="section-description" style="text-align: center; color: var(--muted); max-width: 700px; margin: 0 auto 32px; font-size: 16px;">
+          Here's a selection of my recent work across different disciplines. Each project represents 
+          a unique challenge and creative solution.
+        </p>
+        <div class="projects-grid" id="projectsGrid"></div>
+        <div class="view-more-wrap"><button class="view-more-btn" id="viewMoreBtn" type="button">View More ↗</button></div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience-section" aria-label="Experience">
+      <div class="bg-glow magenta right" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-eyebrow">(03)</div>
+        <div class="experience-layout">
+          <div class="experience-intro">
+            <h2 class="section-title" style="margin-top:0">My Experience</h2>
+            <p class="experience-description">Hello there! My name is Farhan Kamal. I am a passionate developer, designer, and creator dedicated to building innovative solutions and experiences.</p>
+          </div>
+
+          <div class="experience-list-container" aria-live="polite">
+            <div class="experience-item">
+              <div class="experience-header"><span class="experience-period">Jul 2025 — Aug 2025</span><span class="experience-company">Queens Public Library</span></div>
+              <h3 class="experience-title">Library Volunteer / Computer Helper</h3>
+              <div class="skills-tags" aria-label="Skills"><span class="skill-tag">Library Services</span><span class="skill-tag">Community</span><span class="skill-tag">Support</span></div>
+            </div>
+            <div class="experience-item">
+              <div class="experience-header"><span class="experience-period">Jul 2025 — Aug 2025</span><span class="experience-company">Urban Arts</span></div>
+              <h3 class="experience-title">SeniorXP Fellowship Student</h3>
+              <span class="experience-period">Nov 2024 — Jun 2025</span>
+              <h3 class="experience-title">3D Game Development Student</h3>
+              <span class="experience-period">Nov 2023 — Jun 2024</span>
+              <h5 class="experience-title">2D Game Development Student</h5>
+              <div class="skills-tags"><span class="skill-tag">Unity</span><span class="skill-tag">Game Design</span><span class="skill-tag">Teamwork</span></div>
+            </div>
+            <div class="experience-item">
+              <div class="experience-header"><span class="experience-period">Jan 2025 - Jun 2025</span><span class="experience-company">Mouse</span></div>
+              <h3 class="experience-title">Emoti‑Con 2025 Competitor (1st Place)</h3>
+              <div class="skills-tags"><span class="skill-tag">UI/UX</span><span class="skill-tag">App Design</span></div>
+            </div>
+            <div class="experience-item">
+              <div class="experience-header"><span class="experience-period">Dec 2024 — May 2025</span><span class="experience-company">Infosys</span></div>
+              <h3 class="experience-title">Infy App Design Challenge Competitor</h3>
+              <div class="skills-tags"><span class="skill-tag">Figma</span><span class="skill-tag">Prototyping</span></div>
+            </div>
+            <div class="experience-item">
+              <div class="experience-header"><span class="experience-period">Jan 2025 - Apr 2025</span><span class="experience-company">SkillsUSA</span></div>
+              <h3 class="experience-title">Competitor for the New York State Competition</h3>
+              <div class="skills-tags"><span class="skill-tag">Game Dev</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="education-section" aria-label="Education">
+      <div class="bg-glow cyan left" aria-hidden="true"></div>
+      <div class="container">
+        <div class="education-container">
+          <div>
+            <div class="section-eyebrow">(04)</div>
+            <h2 class="section-title">Education</h2>
+            <p class="experience-description">My educational journey focuses on programming, game design, and creative problem‑solving through formal education and specialized programs.</p>
+            <div class="awards-box" aria-label="Awards">
+              <h3 style="margin:0 0 10px; font-weight:900">Awards</h3>
+              <div class="award-item"><span style="font-size:12px; font-weight:900; color:var(--muted)">2025</span><span>Unity Certified User: Programmer</span></div>
+              <div class="award-item"><span style="font-size:12px; font-weight:900; color:var(--muted)">2025</span><span>IT Specialist – Python</span></div>
+              <div class="award-item"><span style="font-size:12px; font-weight:900; color:var(--muted)">2025</span><span>Emoti‑Con 2025 – 2nd Place</span></div>
+              <div class="award-item"><span style="font-size:12px; font-weight:900; color:var(--muted)">2024</span><span>3D Game Development Certificate</span></div>
+            </div>
+          </div>
+
+          <div class="education-timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year" style="font-weight:900">2025</div>
+              <div class="timeline-content">
+                <h3 style="font-weight:900">Summer Pre‑College Program</h3>
+                <p class="experience-description" style="margin:6px 0">Marist University – Game Design</p>
+                <p class="experience-description">Two‑week program offering the college experience and credits in Game Design.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year" style="font-weight:900">2023</div>
+              <div class="timeline-content">
+                <h3 style="font-weight:900">High School Diploma</h3>
+                <p class="experience-description" style="margin:6px 0">Thomas A. Edison CTE High School</p>
+                <p class="experience-description">Focus on Programming and Prototyping; activities include Python, Figma, Game Design, and Music.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect / Footer-like Section -->
+    <section class="connect-wrap" id="connect" aria-label="Connect">
+      <div class="container">
+        <div class="connect-card">
+          <div class="connect-top">
+            <div class="connect-title">Lets Connect!</div>
+            <a class="hire-btn" href="mailto:farhankamal0505@gmail.com" aria-label="Email Me">Email Me ↗</a>
+          </div>
+          <div class="connect-hr"></div>
+          <div class="connect-grid">
+            <div>
+              <div class="mini-logo"><span class="mini-logo-badge">FK</span></div>
+              <p class="footer-text">Thank you for viewing my Portfolio! I hope that you were able to get to know me and I hope to hear from you soon.</p>
+              <div class="socials" aria-label="Social links">
+                <a href="https://x.com/_Farhan__Kamal_" aria-label="Twitter" title="Twitter" style="line-height:0">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5.91992,6l14.66211,21.375l-14.35156,16.625h3.17969l12.57617,-14.57812l10,14.57813h12.01367l-15.31836,-22.33008l13.51758,-15.66992h-3.16992l-11.75391,13.61719l-9.3418,-13.61719zM9.7168,8h7.16406l23.32227,34h-7.16406z"></path></g></g>
+                    </svg>
+                </a>
+                <a href="https://github.com/Farhan-Kamal" aria-label="GitHub" title="GitHub" style="line-height:0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="30" height="30" viewBox="0 0 30 30">
+                    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"></path>
+                </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/farhanskamal/" aria-label="LinkedIn" title="LinkedIn" style="line-height:0">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z"></path></g></g>
+                    </svg>
+                </a>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h4>Navigation</h4>
+              <a class="footer-link" href="index.html">Home</a>
+              <a class="footer-link" href="pages/web-design.html">Service</a>
+              <a class="footer-link" href="#recent-projects">Projects</a>
+              <a class="footer-link" href="pages/ux-ui-design.html">Resume</a>
+            </div>
+            <div class="footer-col">
+              <h4>Contact</h4>
+              <div class="footer-text">farhankamal0505@gmail.com</div>
+              <div class="footer-text">visuallyindie.dev</div>
+            </div>
+          </div>
+          <div class="footer-sub">2025 Farhan Sadeque Kamal.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/site.js" data-root="./"></script>
+  <script>
+    window.HOME_PAGE = true;
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+[
+  { 
+    "title": "Synthwave Runner", 
+    "category": "Game Design", 
+    "url": "projects/game-design/synthwave-runner/index.html", 
+    "description": "Endless runner made in Unity with neon vibes.", 
+    "image": "projects/game-design/synthwave-runner/cover.jpg",
+    "detail": "<p>An endless runner game capturing 80s synthwave aesthetics with procedural generation, dynamic lighting, and power-up systems built in Unity.</p>"
+  },
+  { 
+    "title": "Brand Glyphs", 
+    "category": "Graphic Design", 
+    "description": "Logo set and identity exploration.", 
+    "detail": "<p>Identity marks exploring negative space, symmetry, and motion. Includes grid studies and black/white lockups.</p>" 
+  },
+  { 
+    "title": "Portfolio v2", 
+    "category": "Web Design", 
+    "url": "projects/web-design/portfolio-v2/index.html", 
+    "description": "This portfolio template reimagined." 
+  },
+  { 
+    "title": "EmPow", 
+    "category": "UX/UI", 
+    "url": "projects/ux-ui/EmPow/index.html", 
+    "description": "An App that helps Empower the Youth by helping them in finding oppurtunites." 
+  }
+]
+
+
