@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subartic Island — Graphic Design — Farhan Kamal</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/styles.css" />
+  <style>
+    .project-hero{ padding: 108px 0 24px; border-bottom: 1px solid var(--line); }
+    .project-cover{ width: 100%; height: 360px; border:1px solid var(--line-2); border-radius: var(--radius-lg); margin: 16px 0; overflow:hidden; position: relative; }
+    .project-cover img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .project-meta{ display:flex; gap:10px; flex-wrap:wrap; margin: 10px 0; }
+    .chip{ border:1px solid var(--line-2); padding:6px 10px; border-radius:999px; font-size:12px; font-weight:800 }
+    .prose{ color: var(--muted); }
+    .project-links{ display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+    .project-link{ display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid var(--accent); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 600; transition: all .2s; }
+    .project-link:hover{ background: var(--accent); color: #0b0d11; }
+    
+    /* Pinterest Style Gallery */
+    .gallery-container{ margin: 24px 0; }
+    .pinterest-gallery{ 
+      columns: 3; 
+      column-gap: 20px; 
+      margin: 0; 
+      padding: 0; 
+    }
+    .pinterest-item{ 
+      break-inside: avoid; 
+      margin-bottom: 20px; 
+      border-radius: 12px; 
+      overflow: hidden; 
+      background: var(--surface-2); 
+      border: 1px solid var(--line-2);
+      transition: all 0.3s ease;
+    }
+    .pinterest-item:hover{ 
+      transform: translateY(-4px); 
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+      border-color: var(--accent);
+    }
+    .pinterest-item img{ 
+      width: 100%; 
+      height: auto; 
+      display: block; 
+      object-fit: cover;
+    }
+    .pinterest-caption{ 
+      padding: 16px; 
+      font-size: 14px; 
+      color: var(--text); 
+      font-weight: 500;
+    }
+    .pinterest-description{ 
+      padding: 0 16px 16px; 
+      font-size: 12px; 
+      color: var(--muted); 
+      line-height: 1.4;
+    }
+    
+    /* Responsive Gallery */
+    @media (max-width: 768px) {
+      .pinterest-gallery{ columns: 2; column-gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .pinterest-gallery{ columns: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner" aria-label="Primary">
+    <nav class="container" role="navigation" aria-label="Main">
+      <a href="../../../index.html" class="logo" aria-label="Go to Home">Farhan Kamal</a>
+      <div class="nav-right">
+        <a class="menu-btn" href="../../../index.html#recent-projects">← Back to Projects</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <h1 class="page-title">Subartic Island</h1>
+        <div class="page-subtitle">A Club Penguin Private Server where you play as polar bears</div>
+        <div class="project-meta">
+          <span class="chip">Graphic Design</span>
+          <span class="chip">2022</span>
+          <span class="chip">Logo Design</span>
+          <span class="chip">Emoji Design</span>
+          <span class="chip">Brand Identity</span>
+        </div>
+        <div class="project-cover">
+          <img src="Cover.png" alt="Subartic Island cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div style="display:none; width:100%; height:100%; background: linear-gradient(180deg, var(--surface), var(--surface-2)); place-items:center; color:var(--muted); font-style:italic;">Add cover.jpg here</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container prose">
+        <h2 class="section-title" style="margin-top:24px">Project Overview</h2>
+        <p>Subartic Island is a unique Club Penguin private server that reimagines the classic game by allowing players to play as polar bears instead of the traditional penguins. This creative twist on the beloved game required a complete visual rebrand, including logo design, emoji creation, and overall brand identity development.</p>
+        
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">My Role</h3>
+        <p>I was responsible for the complete visual design of Subartic Island, including:</p>
+        <ul style="margin: 16px 0; padding-left: 20px;">
+          <li><strong>Logo Design</strong> - Creating a distinctive brand mark that represents the polar bear theme</li>
+          <li><strong>Emoji Design</strong> - Designing custom emojis for the Discord server and in-game communication</li>
+          <li><strong>Brand Identity</strong> - Developing the overall visual language and style guide</li>
+          <li><strong>Marketing Assets</strong> - Creating promotional graphics and social media content</li>
+        </ul>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Design Process</h3>
+        <p>The design process involved several key phases:</p>
+        <ol style="margin: 16px 0; padding-left: 20px;">
+          <li><strong>Research & Discovery</strong> - Studying polar bear characteristics and Club Penguin's visual style</li>
+          <li><strong>Concept Development</strong> - Creating initial sketches and mood boards</li>
+          <li><strong>Logo Iteration</strong> - Refining the logo through multiple design iterations</li>
+          <li><strong>Emoji Creation</strong> - Designing a comprehensive set of custom emojis</li>
+          <li><strong>Brand Guidelines</strong> - Establishing consistent visual standards</li>
+        </ol>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Design Gallery</h3>
+        <p>Below will soon be a collection of the visual assets created for Subartic Island, showcasing the logo designs, emoji sets, and various brand elements.</p>
+        <!--
+        <div class="gallery-container" id="galleryContainer">
+          
+        </div> -->
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Tools & Technologies</h3>
+        <div style="margin: 24px 0;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 8px; padding: 16px; text-align: center;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text); font-size: 1rem;">Design Software</h4>
+              <p style="color: var(--muted); margin: 0; font-size: 0.875rem;">Pixilr, Photoshop</p>
+            </div>
+            <div style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 8px; padding: 16px; text-align: center;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text); font-size: 1rem;">Project Type</h4>
+              <p style="color: var(--muted); margin: 0; font-size: 0.875rem;">Brand Identity & Logo Design</p>
+            </div>
+            <div style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 8px; padding: 16px; text-align: center;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text); font-size: 1rem;">Deliverables</h4>
+              <p style="color: var(--muted); margin: 0; font-size: 0.875rem;">Logo, Emojis, Brand Assets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="connect-wrap">
+      <div class="container">
+        <div class="connect-card">
+          <div class="connect-top">
+            <h2 class="connect-title">Interested in More?</h2>
+            <a href="../../../index.html#recent-projects" class="hire-btn">View More Projects</a>
+          </div>
+          <p class="footer-text">Explore more of my work or <a href="mailto:farhankamal0505@gmail.com">get in touch</a> for collaboration.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" aria-label="Footer">
+    <div class="container" style="padding: 28px 0; text-align:center; color: var(--muted); font-size: 14px;">© 2025 Farhan Sadeque Kamal</div>
+  </footer>
+
+  <script>
+    // Pinterest Style Gallery
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryContainer = document.getElementById('galleryContainer');
+      
+      // Gallery data for Subartic Island
+      const galleryData = {
+        images: [
+          { src: 'logo-design.png', caption: 'Subartic Island Logo', description: 'Main brand logo featuring polar bear elements' },
+          { src: 'logo-variations.png', caption: 'Logo Variations', description: 'Different versions of the logo for various applications' },
+          { src: 'emoji-set.png', caption: 'Custom Emoji Set', description: 'Collection of polar bear themed emojis' },
+          { src: 'brand-guidelines.png', caption: 'Brand Guidelines', description: 'Visual style guide and usage standards' },
+          { src: 'social-media.png', caption: 'Social Media Assets', description: 'Promotional graphics for social platforms' },
+          { src: 'discord-banner.png', caption: 'Discord Server Banner', description: 'Custom banner design for the Discord community' },
+          { src: 'in-game-ui.png', caption: 'In-Game UI Elements', description: 'User interface elements for the game' },
+          { src: 'character-designs.png', caption: 'Character Designs', description: 'Polar bear character variations and accessories' },
+          { src: 'promotional-art.png', caption: 'Promotional Artwork', description: 'Marketing materials and promotional graphics' }
+        ]
+      };
+      
+      createPinterestGallery(galleryContainer, galleryData.images);
+    });
+    
+    function createPinterestGallery(container, images) {
+      const galleryHTML = `
+        <div class="pinterest-gallery">
+          ${images.map(img => `
+            <div class="pinterest-item">
+              <img src="${img.src}" alt="${img.caption}" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+              <div style="display:none; width:100%; height:200px; background: linear-gradient(180deg, var(--surface), var(--surface-2)); place-items:center; color:var(--muted); font-style:italic;">Add ${img.src}</div>
+              <div class="pinterest-caption">${img.caption}</div>
+              <div class="pinterest-description">${img.description}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      
+      container.innerHTML = galleryHTML;
+    }
+  </script>
+</body>
+</html>

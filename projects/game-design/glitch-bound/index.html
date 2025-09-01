@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glitch Bound — Game Design — Farhan Kamal</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/styles.css" />
+  <style>
+    .project-hero{ padding: 108px 0 24px; border-bottom: 1px solid var(--line); }
+    .project-cover{ width: 100%; height: 360px; border:1px solid var(--line-2); border-radius: var(--radius-lg); margin: 16px 0; overflow:hidden; position: relative; }
+    .project-cover img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .project-meta{ display:flex; gap:10px; flex-wrap:wrap; margin: 10px 0; }
+    .chip{ border:1px solid var(--line-2); padding:6px 10px; border-radius:999px; font-size:12px; font-weight:800 }
+    .prose{ color: var(--muted); }
+    .project-links{ display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+    .project-link{ display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid var(--accent); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 600; transition: all .2s; }
+    .project-link:hover{ background: var(--accent); color: #0b0d11; }
+    .screenshots{ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0; }
+    .screenshot{ border: 1px solid var(--line-2); border-radius: 12px; overflow: hidden; }
+    .screenshot img{ width: 100%; height: 200px; object-fit: cover; display: block; }
+    .screenshot-caption{ padding: 12px; font-size: 14px; color: var(--muted); text-align: center; }
+    
+    /* Gallery System Styles */
+    .gallery-container{ margin: 24px 0; }
+    .gallery-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .gallery-item{ border: 1px solid var(--line-2); border-radius: 12px; overflow: hidden; }
+    .gallery-item img{ width: 100%; height: 200px; object-fit: cover; display: block; }
+    .gallery-caption{ padding: 12px; font-size: 14px; color: var(--muted); text-align: center; }
+    
+    .slideshow-container{ position: relative; margin: 24px 0; }
+    .slideshow{ display: none; }
+    .slideshow.active{ display: block; }
+    .slideshow img{ width: 100%; height: 400px; object-fit: cover; border-radius: 12px; }
+    .slideshow-nav{ display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+    .slideshow-dot{ width: 12px; height: 12px; border-radius: 50%; background: var(--line-2); cursor: pointer; transition: background .2s; }
+    .slideshow-dot.active{ background: var(--accent); }
+    .slideshow-prev, .slideshow-next{ position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 12px; border-radius: 50%; cursor: pointer; font-size: 18px; }
+    .slideshow-prev{ left: 16px; }
+    .slideshow-next{ right: 16px; }
+  </style>
+</head>
+<body>
+  <header role="banner" aria-label="Primary">
+    <nav class="container" role="navigation" aria-label="Main">
+      <a href="../../../index.html" class="logo" aria-label="Go to Home">Farhan Kamal</a>
+      <div class="nav-right">
+        <a class="menu-btn" href="../../../index.html#recent-projects">← Back to Projects</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <h1 class="page-title">GlitchBound</h1>
+        <div class="page-subtitle">Music Production, Video Editing &amp; QA Testing</div>
+        <div class="project-meta">
+          <span class="chip">Game Design</span>
+          <span class="chip">2025</span>
+          <span class="chip">Music Production</span>
+          <span class="chip">Video Editing</span>
+          <span class="chip">QA Testing</span>
+        </div>
+        <div class="project-cover">
+          <img src="Cover.png" alt="Glitch Bound cover"/>
+          
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container prose">
+        <h2 class="section-title" style="margin-top:24px">My Role</h2>
+        <p>I was responsible for <strong>Music Production</strong>, <strong>Video Editing</strong>, and <strong>QA Testing</strong> for GlitchBound, a 2D puzzle-platformer where players use in-game glitches to navigate and manipulate a fractured simulation.</p>
+        
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Music Production</h3>
+        <p>Created original music tracks and sound effects that enhance the game's retro-futuristic aesthetic and immersive atmosphere. The soundtrack includes ambient tracks, glitch sound effects, and dynamic music that responds to gameplay events.</p>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Video Editing</h3>
+        <p>Produced promotional videos, gameplay trailers, and development updates showcasing the game's unique mechanics and visual style. Created engaging content that highlights the game's glitch-based gameplay and narrative elements.</p>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">QA Testing</h3>
+        <p>Conducted comprehensive quality assurance testing to identify bugs, gameplay issues, and user experience problems. Provided detailed feedback on game mechanics, difficulty balancing, and overall player experience.</p>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Deliverables</h3>
+        <div style="margin: 24px 0;">
+          <h4 style="margin: 0 0 16px 0; color: var(--text);">Gameplay Trailer</h4>
+          <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin-bottom: 24px;">
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid var(--line-2); border-radius: 8px;" src="https://www.youtube-nocookie.com/embed/pjzvuNRtSK0?si=1n_B9kHP8YBHWq24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          
+          <h4 style="margin: 0 0 16px 0; color: var(--text);">Music Showcase</h4>
+          <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin-bottom: 24px;">
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid var(--line-2); border-radius: 8px;" src="https://www.youtube-nocookie.com/embed/GMxIMBxQCy4?si=Eq0XfukUOP56Y2Zi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Technical Details (Game Overview)</h3>
+        <details style="margin: 24px 0; border: 1px solid var(--line-2); border-radius: 8px; overflow: hidden;">
+          <summary style="padding: 16px; background: var(--surface-2); cursor: pointer; font-weight: 600; color: var(--text);">Click to view technical game details</summary>
+          <div style="padding: 16px;">
+            <p>GlitchBound is a 2D puzzle-platformer where the player uses in-game glitches to navigate and manipulate a fractured simulation. Designed with a retro-futuristic pixel art aesthetic and immersive sound design, the game challenges players to exploit intentional bugs—such as wall clipping, gravity shifting, object duplication, and time glitches—to solve puzzles and recover lost memory fragments.</p>
+            
+            <h4 style="margin: 24px 0 16px 0; color: var(--text);">Target Audience</h4>
+            <p>Players aged 12 and up who enjoy sci-fi puzzle-platformers with unique mechanics and deep lore. Ideal for fans of Celeste, Fez, The Messenger, and Katana Zero.</p>
+
+            <h4 style="margin: 24px 0 16px 0; color: var(--text);">Main Selling Points</h4>
+            <ul style="margin: 16px 0; padding-left: 20px;">
+              <li>Reality-bending mechanics like Wall Clipping, Gravity Shift, and Time Rewind</li>
+              <li>A Memory Fragment system that ties gameplay to narrative discovery</li>
+              <li>Highly stylized glitch visual effects</li>
+              <li>Layered level design encouraging exploration and creative thinking</li>
+              <li>A gradually revealed story with emotional depth and a cinematic finale</li>
+            </ul>
+
+            <h4 style="margin: 24px 0 16px 0; color: var(--text);">Inspirational Games</h4>
+            <ul style="margin: 16px 0; padding-left: 20px;">
+              <li>Celeste – precision platforming + emotional narrative</li>
+              <li>Axiom Verge – glitch-based mechanics and retro vibes</li>
+              <li>Fez – hidden lore and puzzle-focused design</li>
+              <li>Hyper Light Drifter – worldbuilding through visuals and fragments</li>
+            </ul>
+
+            <h4 style="margin: 24px 0 16px 0; color: var(--text);">Technical Specifications</h4>
+            <p><strong>Estimated Total Playtime:</strong> 20–35 minutes for a full playthrough, depending on puzzle-solving speed and memory collection.</p>
+            
+            <h5 style="margin: 24px 0 16px 0; color: var(--text);">Performance Metrics</h5>
+            <ul style="margin: 16px 0; padding-left: 20px;">
+              <li>Stable framerate on typical desktop PCs running Unity (60 FPS target)</li>
+              <li>Average scene load time: &lt; 3 seconds</li>
+              <li>Memory system tracks and stores up to 20 memory fragments using PlayerPrefs</li>
+              <li>Visual effects optimized through URP with post-processing Volumes</li>
+            </ul>
+
+            <h4 style="margin: 24px 0 16px 0; color: var(--text);">SWOT Analysis</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0;">
+              <div>
+                <h5 style="margin: 0 0 16px 0; color: var(--text);">Strengths</h5>
+                <ul style="margin: 0; padding-left: 20px;">
+                  <li>Unique gameplay mechanic: using glitches intentionally as tools rather than bugs</li>
+                  <li>Engaging narrative delivered through collectible memory fragments</li>
+                  <li>Stylish retro pixel art with immersive glitch effects</li>
+                  <li>Clever level design encourages creative problem solving</li>
+                  <li>Modular level structure allows for easy scalability and updates</li>
+                  <li>Cross-level progression via memory logs creates replay incentive</li>
+                  <li>Puzzle variety grows steadily, avoiding early repetitiveness</li>
+                </ul>
+              </div>
+              <div>
+                <h5 style="margin: 0 0 16px 0; color: var(--text);">Weaknesses</h5>
+                <ul style="margin: 0; padding-left: 20px;">
+                  <li>No traditional combat may limit appeal for certain player types</li>
+                  <li>High reliance on glitch effects may strain some players' eyes</li>
+                  <li>Limited NPC or character interaction could impact emotional engagement</li>
+                  <li>Puzzle complexity may spike without strong visual or tutorial cues</li>
+                  <li>PlayerPrefs save system is vulnerable to resets or accidental clears</li>
+                  <li>Lack of dynamic audio/music transitions could weaken atmosphere</li>
+                  <li>Some effects (e.g., Time Freeze) require precise tuning for fairness</li>
+                  <li>Fixed memory order may reduce freedom for nonlinear players</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0;">
+              <div>
+                <h5 style="margin: 0 0 16px 0; color: var(--text);">Opportunities</h5>
+                <ul style="margin: 0; padding-left: 20px;">
+                  <li>Strong appeal to fans of indie puzzle-platformers</li>
+                  <li>Expansion potential: more levels, fragment lore, or combat mechanics</li>
+                  <li>Could adapt well to console or handheld platforms</li>
+                  <li>Market interest in "meta" or glitch-style games continues to grow</li>
+                  <li>Memory system could evolve into a codex or interactive storybook</li>
+                  <li>Additional "corrupted" mechanics or worlds could deepen gameplay</li>
+                  <li>Visual and sound assets are reusable for sequels or expansions</li>
+                  <li>Compelling lore invites possible spin-offs (comics, visual novels, ARGs)</li>
+                </ul>
+              </div>
+              <div>
+                <h5 style="margin: 0 0 16px 0; color: var(--text);">Threats</h5>
+                <ul style="margin: 0; padding-left: 20px;">
+                  <li>Competes with polished indie hits (Celeste, Fez, etc.)</li>
+                  <li>Audience confusion between real bugs and intentional glitch mechanics</li>
+                  <li>Scope creep risk: too many mechanics could overwhelm players</li>
+                  <li>Needs refined onboarding/tutorial to avoid early frustration</li>
+                  <li>Over-scoping mechanics could risk unfinished or unpolished systems</li>
+                  <li>Visual simplicity could be misjudged as under-designed</li>
+                  <li>Bug fixing is critical—unintended glitches could break immersion</li>
+                  <li>Longer-form games may outshine it if narrative isn't paced effectively</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4 style="margin: 24px 0 16px 0; color: var(--text);">Code Examples</h4>
+            
+            <h5 style="margin: 24px 0 16px 0; color: var(--text);">Memory Revealer (C#)</h5>
+            <pre style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 8px; padding: 16px; overflow-x: auto; font-size: 14px; line-height: 1.5;"><code>using UnityEngine;
+using TMPro;
+
+public class MemoryFragment : MonoBehaviour
+{
+    public string memoryID;
+    [TextArea(3, 6)] public string memoryText;
+    public GameObject memoryPanel;
+    public TextMeshProUGUI memoryTextUI;
+    private bool showingMemory = false;
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") &amp;&amp; !PlayerPrefs.HasKey(memoryID))
+        {
+            ShowMemory();
+        }
+    }
+
+    void Update()
+    {
+        if (showingMemory &amp;&amp; Input.GetKeyDown(KeyCode.X))
+        {
+            HideMemory();
+        }
+    }
+
+    void ShowMemory()
+    {
+        memoryTextUI.text = memoryText;
+        memoryPanel.SetActive(true);
+        Time.timeScale = 0f;
+        showingMemory = true;
+        PlayerPrefs.SetInt(memoryID, 1);
+    }
+
+    void HideMemory()
+    {
+        memoryPanel.SetActive(false);
+        Time.timeScale = 1f;
+        showingMemory = false;
+        Destroy(gameObject);
+    }
+}</code></pre>
+
+            <h5 style="margin: 24px 0 16px 0; color: var(--text);">Glitch Transition (C#)</h5>
+            <pre style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 8px; padding: 16px; overflow-x: auto; font-size: 14px; line-height: 1.5;"><code>using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
+using URPGlitch.Runtime.AnalogGlitch;
+using URPGlitch.Runtime.DigitalGlitch;
+
+public class ExitDoor : MonoBehaviour
+{
+    public Volume glitchVolume;
+    public string nextSceneName;
+    public float glitchDuration = 2f;
+    private AnalogGlitchVolume analogGlitch;
+    private DigitalGlitchVolume digitalGlitch;
+    private bool isTriggered = false;
+
+    private void Start()
+    {
+        if (glitchVolume != null &amp;&amp; glitchVolume.profile != null)
+        {
+            glitchVolume.profile.TryGet(out analogGlitch);
+            glitchVolume.profile.TryGet(out digitalGlitch);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isTriggered) return;
+        if (other.CompareTag("Player"))
+        {
+            isTriggered = true;
+            StartCoroutine(TriggerGlitchTransition());
+        }
+    }
+
+    private System.Collections.IEnumerator TriggerGlitchTransition()
+    {
+        if (analogGlitch != null)
+        {
+            analogGlitch.scanLineJitter.value = 0.8f;
+            analogGlitch.verticalJump.value = 0.5f;
+            analogGlitch.horizontalShake.value = 0.6f;
+            analogGlitch.colorDrift.value = 0.9f;
+        }
+        
+        if (digitalGlitch != null)
+        {
+            digitalGlitch.intensity.value = 0.85f;
+        }
+
+        yield return new WaitForSeconds(glitchDuration);
+        SceneManager.LoadScene(nextSceneName);
+    }
+}</code></pre>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="connect-wrap">
+      <div class="container">
+        <div class="connect-card">
+          <div class="connect-top">
+            <h2 class="connect-title">Interested in More?</h2>
+            <a href="../../../index.html#recent-projects" class="hire-btn">View More Projects</a>
+          </div>
+          <p class="footer-text">Explore more of my work or <a href="mailto:farhankamal0505@gmail.com">get in touch</a> for collaboration.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" aria-label="Footer">
+    <div class="container" style="padding: 28px 0; text-align:center; color: var(--muted); font-size: 14px;">© 2025 Farhan Sadeque Kamal</div>
+  </footer>
+
+  <script>
+    // Gallery/Slideshow System
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryContainer = document.getElementById('galleryContainer');
+      
+      // Gallery data for Glitch Bound
+      const galleryData = {
+        mode: 'gallery', // 'none', 'slideshow', or 'gallery'
+        images: [
+          { src: 'screenshot1.jpg', caption: 'Main gameplay' },
+          { src: 'screenshot2.jpg', caption: 'Glitched environment' },
+          { src: 'screenshot3.jpg', caption: 'Character abilities' }
+        ]
+      };
+      
+      if (galleryData.mode === 'none') {
+        galleryContainer.innerHTML = '<p style="color: var(--muted); font-style: italic;">No additional images to display.</p>';
+      } else if (galleryData.mode === 'slideshow') {
+        createSlideshow(galleryContainer, galleryData.images);
+      } else if (galleryData.mode === 'gallery') {
+        createGallery(galleryContainer, galleryData.images);
+      }
+    });
+    
+    function createSlideshow(container, images) {
+      if (images.length === 0) return;
+      
+      let currentSlide = 0;
+      
+      const slideshowHTML = `
+        <div class="slideshow-container">
+          ${images.map((img, index) => `
+            <div class="slideshow ${index === 0 ? 'active' : ''}">
+              <img src="${img.src}" alt="${img.caption}" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+              <div style="display:none; width:100%; height:400px; background: linear-gradient(180deg, var(--surface), var(--surface-2)); place-items:center; color:var(--muted); font-style:italic;">Add ${img.src}</div>
+            </div>
+          `).join('')}
+          <button class="slideshow-prev" onclick="changeSlide(-1)">‹</button>
+          <button class="slideshow-next" onclick="changeSlide(1)">›</button>
+          <div class="slideshow-nav">
+            ${images.map((_, index) => `
+              <div class="slideshow-dot ${index === 0 ? 'active' : ''}" onclick="goToSlide(${index})"></div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+      
+      container.innerHTML = slideshowHTML;
+      
+      window.changeSlide = function(direction) {
+        const slides = document.querySelectorAll('.slideshow');
+        const dots = document.querySelectorAll('.slideshow-dot');
+        
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      };
+      
+      window.goToSlide = function(index) {
+        const slides = document.querySelectorAll('.slideshow');
+        const dots = document.querySelectorAll('.slideshow-dot');
+        
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        
+        currentSlide = index;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      };
+    }
+  </script>
+</body>
+</html>

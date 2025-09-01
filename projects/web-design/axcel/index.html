@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Axcel — Web Design — Farhan Kamal</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/styles.css" />
+  <style>
+    .project-hero{ padding: 108px 0 24px; border-bottom: 1px solid var(--line); }
+    .project-cover{ width: 100%; height: 360px; border:1px solid var(--line-2); border-radius: var(--radius-lg); margin: 16px 0; overflow:hidden; position: relative; }
+    .project-cover img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .project-meta{ display:flex; gap:10px; flex-wrap:wrap; margin: 10px 0; }
+    .chip{ border:1px solid var(--line-2); padding:6px 10px; border-radius:999px; font-size:12px; font-weight:800 }
+    .prose{ color: var(--muted); }
+    .project-links{ display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+    .project-link{ display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid var(--accent); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 600; transition: all .2s; }
+    .project-link:hover{ background: var(--accent); color: #0b0d11; }
+    .screenshots{ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0; }
+    .screenshot{ border: 1px solid var(--line-2); border-radius: 12px; overflow: hidden; }
+    .screenshot img{ width: 100%; height: 200px; object-fit: cover; display: block; }
+    .screenshot-caption{ padding: 12px; font-size: 14px; color: var(--muted); text-align: center; }
+    
+    /* Gallery System Styles */
+    .gallery-container{ margin: 24px 0; }
+    .gallery-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .gallery-item{ border: 1px solid var(--line-2); border-radius: 12px; overflow: hidden; }
+    .gallery-item img{ width: 100%; height: 200px; object-fit: cover; display: block; }
+    .gallery-caption{ padding: 12px; font-size: 14px; color: var(--muted); text-align: center; }
+    
+    .slideshow-container{ position: relative; margin: 24px 0; }
+    .slideshow{ display: none; }
+    .slideshow.active{ display: block; }
+    .slideshow img{ width: 100%; height: 400px; object-fit: cover; border-radius: 12px; }
+    .slideshow-nav{ display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+    .slideshow-dot{ width: 12px; height: 12px; border-radius: 50%; background: var(--line-2); cursor: pointer; transition: background .2s; }
+    .slideshow-dot.active{ background: var(--accent); }
+    .slideshow-prev, .slideshow-next{ position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 12px; border-radius: 50%; cursor: pointer; font-size: 18px; }
+    .slideshow-prev{ left: 16px; }
+    .slideshow-next{ right: 16px; }
+  </style>
+</head>
+<body>
+  <header role="banner" aria-label="Primary">
+    <nav class="container" role="navigation" aria-label="Main">
+      <a href="../../../index.html" class="logo" aria-label="Go to Home">Farhan Kamal</a>
+      <div class="nav-right">
+        <a class="menu-btn" href="../../../index.html#recent-projects">← Back to Projects</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <h1 class="page-title">Axcel</h1>
+        <div class="page-subtitle">A modern chat app similar to Discord with landing page and sign-up design</div>
+        <div class="project-meta">
+          <span class="chip">Web Design</span>
+          <span class="chip">2023</span>
+          <span class="chip">UI/UX Design</span>
+          <span class="chip">Landing Page</span>
+          <span class="chip">Sign-up Flow</span>
+          <span class="chip">HTML/CSS</span>
+        </div>
+        <div class="project-cover">
+          <img src="Cover.png" alt="Axcel cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div style="display:none; width:100%; height:100%; background: linear-gradient(180deg, var(--surface), var(--surface-2)); place-items:center; color:var(--muted); font-style:italic;">Add cover.jpg here</div>
+        </div>
+        
+        <div class="project-links">
+          <a href="https://farhan-kamal.github.io/AxcelLandingPage/" class="project-link" target="_blank">
+            <span>🌐</span> Live Demo
+          </a>
+          <a href="https://github.com/Farhan-Kamal/AxcelLandingPage" class="project-link" target="_blank">
+            <span>📁</span> Source Code
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container prose">
+        <h2 class="section-title" style="margin-top:24px">Project Overview</h2>
+        <p>Axcel is a modern chat application designed to provide a seamless communication experience similar to Discord. The project focused on creating an intuitive landing page and a streamlined sign-up process that would attract and retain users while showcasing the app's key features and benefits.</p>
+        
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">My Role</h3>
+        <p>I was responsible for the complete design and development of the user interface, including:</p>
+        <ul style="margin: 16px 0; padding-left: 20px;">
+          <li><strong>Landing Page Design</strong> - Creating an engaging homepage that highlights key features</li>
+          <li><strong>Sign-up Flow Design</strong> - Designing a user-friendly registration process</li>
+          <li><strong>UI/UX Design</strong> - Developing the overall user experience and interface design</li>
+          <li><strong>Responsive Design</strong> - Ensuring the design works perfectly across all devices</li>
+        </ul>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Design Process</h3>
+        <p>The design process involved several key phases:</p>
+        <ol style="margin: 16px 0; padding-left: 20px;">
+          <li><strong>UI Design</strong> - Developing high-fidelity designs with modern aesthetics</li>
+          <li><strong>Prototyping</strong> - Building interactive prototypes to test responsiveness</li>
+          <li><strong>Development</strong> - Finialzing the look</li>
+        </ol>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Key Features</h3>
+        <div style="margin: 24px 0;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 12px; padding: 20px;">
+              <h4 style="margin: 0 0 12px 0; color: var(--text); font-size: 1.1rem;">🎨 Modern Design</h4>
+              <p style="color: var(--muted); margin: 0; font-size: 0.875rem;">Clean, contemporary interface with intuitive navigation and visual hierarchy</p>
+            </div>
+            <div style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 12px; padding: 20px;">
+              <h4 style="margin: 0 0 12px 0; color: var(--text); font-size: 1.1rem;">📱 Responsive</h4>
+              <p style="color: var(--muted); margin: 0; font-size: 0.875rem;">Fully responsive design that works seamlessly on desktop, tablet, and mobile</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Screenshots</h3>
+        <p>Below are screenshots showcasing the landing page design and sign-up flow:</p>
+        
+        <div class="gallery-container" id="galleryContainer">
+          <!-- Gallery content will be loaded dynamically -->
+        </div>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Technical Implementation</h3>
+        <div style="margin: 24px 0;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 8px; padding: 16px; text-align: center;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text); font-size: 1rem;">Frontend</h4>
+              <p style="color: var(--muted); margin: 0; font-size: 0.875rem;">HTML, CSS, JavaScript</p>
+            </div>
+            <div style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 8px; padding: 16px; text-align: center;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text); font-size: 1rem;">Design Tools</h4>
+              <p style="color: var(--muted); margin: 0; font-size: 0.875rem;">Google, Pixilr</p>
+            </div>
+            <div style="background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 8px; padding: 16px; text-align: center;">
+              <h4 style="margin: 0 0 8px 0; color: var(--text); font-size: 1rem;">Features</h4>
+              <p style="color: var(--muted); margin: 0; font-size: 0.875rem;">Responsive, Interactive, Dark Mode</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-title" style="margin-top:32px; font-size: 20px;">Outcome & Impact</h3>
+        <p>The Axcel project successfully delivered:</p>
+        <ul style="margin: 16px 0; padding-left: 20px;">
+          <li>A modern, engaging landing page that effectively communicates the app's value proposition</li>
+          <li>A sign-up page that reduces friction and improves conversion rates</li>
+          <li>Responsive design that provides an excellent user experience across all devices</li>
+          <li>Clean, maintainable code that follows best practices and modern web standards</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="connect-wrap">
+      <div class="container">
+        <div class="connect-card">
+          <div class="connect-top">
+            <h2 class="connect-title">Interested in More?</h2>
+            <a href="../../../index.html#recent-projects" class="hire-btn">View More Projects</a>
+          </div>
+          <p class="footer-text">Explore more of my work or <a href="mailto:farhankamal0505@gmail.com">get in touch</a> for collaboration.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" aria-label="Footer">
+    <div class="container" style="padding: 28px 0; text-align:center; color: var(--muted); font-size: 14px;">© 2025 Farhan Sadeque Kamal</div>
+  </footer>
+
+  <script>
+    // Gallery/Slideshow System
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryContainer = document.getElementById('galleryContainer');
+      
+      // Gallery data for Axcel
+      const galleryData = {
+        mode: 'gallery', // 'none', 'slideshow', or 'gallery'
+        images: [
+          { src: 'Cover.png', caption: 'Landing Page' },
+          { src: 'AxecelHPI.png', caption: 'Mock Up Design of the App' },
+          { src: 'AxecelHPIM.png', caption: 'Mobile Version of The Mock Up' },
+          { src: 'LoginPageA.jpg', caption: 'Login Screen' },
+          { src: 'SignUpPageA.jpg', caption: 'Sign Up Screen' }
+        ]
+      };
+      
+      if (galleryData.mode === 'none') {
+        galleryContainer.innerHTML = '<p style="color: var(--muted); font-style: italic;">No additional images to display.</p>';
+      } else if (galleryData.mode === 'slideshow') {
+        createSlideshow(galleryContainer, galleryData.images);
+      } else if (galleryData.mode === 'gallery') {
+        createGallery(galleryContainer, galleryData.images);
+      }
+    });
+    
+    function createSlideshow(container, images) {
+      if (images.length === 0) return;
+      
+      let currentSlide = 0;
+      
+      const slideshowHTML = `
+        <div class="slideshow-container">
+          ${images.map((img, index) => `
+            <div class="slideshow ${index === 0 ? 'active' : ''}">
+              <img src="${img.src}" alt="${img.caption}" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+              <div style="display:none; width:100%; height:400px; background: linear-gradient(180deg, var(--surface), var(--surface-2)); place-items:center; color:var(--muted); font-style:italic;">Add ${img.src}</div>
+            </div>
+          `).join('')}
+          <button class="slideshow-prev" onclick="changeSlide(-1)">‹</button>
+          <button class="slideshow-next" onclick="changeSlide(1)">›</button>
+          <div class="slideshow-nav">
+            ${images.map((_, index) => `
+              <div class="slideshow-dot ${index === 0 ? 'active' : ''}" onclick="goToSlide(${index})"></div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+      
+      container.innerHTML = slideshowHTML;
+      
+      window.changeSlide = function(direction) {
+        const slides = document.querySelectorAll('.slideshow');
+        const dots = document.querySelectorAll('.slideshow-dot');
+        
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      };
+      
+      window.goToSlide = function(index) {
+        const slides = document.querySelectorAll('.slideshow');
+        const dots = document.querySelectorAll('.slideshow-dot');
+        
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        
+        currentSlide = index;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      };
+    }
+    
+    function createGallery(container, images) {
+      const galleryHTML = `
+        <div class="gallery-grid">
+          ${images.map(img => `
+            <div class="gallery-item">
+              <img src="${img.src}" alt="${img.caption}" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+              <div style="display:none; width:100%; height:200px; background: linear-gradient(180deg, var(--surface), var(--surface-2)); place-items:center; color:var(--muted); font-style:italic;">Add ${img.src}</div>
+              <div class="gallery-caption">${img.caption}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      
+      container.innerHTML = galleryHTML;
+    }
+  </script>
+</body>
+</html>
+
+

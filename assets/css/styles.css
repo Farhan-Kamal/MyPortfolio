@@ -53,7 +53,7 @@ nav { display: flex; justify-content: space-between; align-items: center; gap: 1
 .mobile-menu-btn .bars::after { top: 6px; }
 .mobile-menu { position: fixed; inset: 0; background: rgba(4,6,10,0.55); backdrop-filter: blur(6px); opacity: 0; visibility: hidden; transition: opacity .18s var(--ease), visibility .18s var(--ease); z-index: 1500; }
 .mobile-menu.show { opacity: 1; visibility: visible; }
-.mobile-menu .popup { position: absolute; top: 950%; left: 50%; transform: translate(-50%, -50%) scale(0.96); opacity: 0; transition: transform .22s var(--ease), opacity .22s var(--ease); width: min(92vw, 420px); max-height: 80vh; overflow: hidden; background: #0e141c; border: 1px solid var(--line-2); border-radius: var(--radius-lg); box-shadow: var(--shadow-2); display: grid; grid-template-rows: auto 1fr; }
+.mobile-menu .popup { position: absolute; top: 600%; left: 50%; transform: translate(-50%, -50%) scale(0.96); opacity: 0; transition: transform .22s var(--ease), opacity .22s var(--ease); width: min(92vw, 420px); max-height: 80vh; overflow: hidden; background: #0e141c; border: 1px solid var(--line-2); border-radius: var(--radius-lg); box-shadow: var(--shadow-2); display: grid; grid-template-rows: auto 1fr; }
 .mobile-menu.show .popup { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 .popup-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px; border-bottom: 1px solid var(--line); }
 .mobile-close { width: 36px; height: 32px; display: grid; place-items: center; border: 1px solid var(--line-2); background: #0d141d; color: var(--text); border-radius: 8px; cursor: pointer; }
@@ -104,7 +104,8 @@ body.no-scroll, html.no-scroll { overflow: hidden; }
 .typing-caret::after { content: '▌'; margin-left: 2px; color: var(--accent); animation: pulse 1s infinite; }
 @keyframes pulse { 0%,50%{opacity:1} 51%,100%{opacity:0} }
 
-.hero-image-content { width: 100%; height: 220px; border: 1px solid var(--line-2); border-radius: var(--radius-lg); background: linear-gradient(180deg, var(--surface), var(--surface-2)); display: grid; place-items: center; color: var(--muted); font-style: italic; }
+.hero-image-content { width: 100%; border: 1px solid var(--line-2); border-radius: var(--radius-lg); background: linear-gradient(180deg, var(--surface), var(--surface-2)); display: grid; place-items: center; color: var(--muted); font-style: italic; }
+.hero-image-content1 { width: 100%; height: 500px; border: 1px solid var(--line-2); border-radius: var(--radius-lg); background: linear-gradient(180deg, var(--surface), var(--surface-2)); display: grid; place-items: center; color: var(--muted); font-style: italic; }
 /* Liquid gradient animation */
 .morph-bg{ position: relative; width: 100%; height: 100%; border-radius: inherit; overflow: hidden; background: radial-gradient(80% 60% at 50% 40%, rgba(109,241,255,0.08), transparent 60%), radial-gradient(60% 40% at 60% 70%, rgba(255,61,241,0.08), transparent 60%); }
 .blob{ position:absolute; width: 420px; height: 420px; border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%; animation: morph 18s ease-in-out infinite; will-change: border-radius; }
@@ -130,7 +131,7 @@ body.no-scroll, html.no-scroll { overflow: hidden; }
 .projects-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
 .project-card { display: grid; grid-template-columns: 1fr; grid-column: span 6; border: 1px solid var(--line-2); background: #0e141c; transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-1); }
 .project-card:hover { transform: translateY(-3px); border-color: var(--accent); background: #0c121a; box-shadow: var(--shadow-2); }
-.project-thumb { width: 100%; height: 190px; display: grid; place-items: center; background: linear-gradient(180deg, var(--surface), var(--surface-2)); border-bottom: 1px solid var(--line); color: var(--muted); font-style: italic; position: relative; overflow: hidden; }
+.project-thumb { width: 100%; display: grid; place-items: center; background: linear-gradient(180deg, var(--surface), var(--surface-2)); border-bottom: 1px solid var(--line); color: var(--muted); font-style: italic; position: relative; overflow: hidden; }
 .project-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .project-meta { padding: 16px; display: grid; gap: 6px; }
 .project-kicker { font-size: 12px; color: var(--muted); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }

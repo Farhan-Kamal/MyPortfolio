@@ -1,6 +1,6 @@
 [
-  { "title": "Synthwave Runner", "url": "../projects/game-design/synthwave-runner/index.html", "description": "Endless runner made in Unity with neon vibes.", "image": "../projects/game-design/synthwave-runner/cover.jpg" },
-  { "title": "Puzzle Grid", "description": "Mobile puzzle prototype with touch gestures.", "detail": "<p>Short demo video and mechanics notes.</p>", "image": "../projects/game-design/puzzle-grid/cover.jpg" }
+  { "title": "Verdant Clicker", "url": "../projects/game-design/verdant-clicker/index.html", "description": "An eco-friendly clicker game prototype teaching green living.", "image": "../projects/game-design/verdant-clicker/Cover.png" },
+  { "title": "GlitchBound", "url": "../projects/game-design/glitch-bound/index.html", "description": "A 2D puzzle-platformer where glitches become your tools.", "image": "../projects/game-design/glitch-bound/Cover.png" }
 ]
 
 

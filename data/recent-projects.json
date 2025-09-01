@@ -1,29 +1,37 @@
 [
   { 
-    "title": "Synthwave Runner", 
+    "title": "Verdant Clicker", 
     "category": "Game Design", 
-    "url": "projects/game-design/synthwave-runner/index.html", 
-    "description": "Endless runner made in Unity with neon vibes.", 
-    "image": "projects/game-design/synthwave-runner/cover.jpg",
-    "detail": "<p>An endless runner game capturing 80s synthwave aesthetics with procedural generation, dynamic lighting, and power-up systems built in Unity.</p>"
+    "url": "../projects/game-design/verdant-clicker/index.html", 
+    "description": "An eco-friendly clicker game prototype teaching green living.", 
+    "image": "../projects/game-design/verdant-clicker/Cover.png"
   },
   { 
-    "title": "Brand Glyphs", 
-    "category": "Graphic Design", 
-    "description": "Logo set and identity exploration.", 
-    "detail": "<p>Identity marks exploring negative space, symmetry, and motion. Includes grid studies and black/white lockups.</p>" 
+    "title": "GlitchBound", 
+    "category": "Game Design", 
+    "url": "../projects/game-design/glitch-bound/index.html", 
+    "description": "A 2D puzzle-platformer where glitches become your tools.", 
+    "image": "../projects/game-design/glitch-bound/Cover.png"
   },
   { 
-    "title": "Portfolio v2", 
+    "title": "Subarctic Island", 
+    "url": "../projects/graphic-design/subarcticIsland/index.html", 
+    "description": "A Club Penguin Private Server.", 
+    "image": "../projects/graphic-design/subarcticIsland/Cover.png"
+  },
+  { 
+    "title": "Axcel", 
     "category": "Web Design", 
-    "url": "projects/web-design/portfolio-v2/index.html", 
-    "description": "This portfolio template reimagined." 
+    "url": "../projects/web-design/axcel/index.html", 
+    "description": "A modern chat app similar to Discord with landing page and sign-up design.",
+    "image": "../projects/web-design/axcel/Cover.png"
   },
   { 
     "title": "EmPow", 
     "category": "UX/UI", 
-    "url": "projects/ux-ui/EmPow/index.html", 
-    "description": "An App that helps Empower the Youth by helping them in finding oppurtunites." 
+    "url": "../projects/ux-ui/EmPow/index.html", 
+    "description": "An App that helps Empower the Youth by helping them in finding oppurtunites.",
+    "image": "../projects/ux-ui/EmPow/Cover.png"
   }
 ]
 
