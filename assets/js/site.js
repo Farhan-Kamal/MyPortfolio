@@ -178,7 +178,7 @@
     "A Web Designer",
     "An Aspring Entrepreneur",
     "A Tech Enthusiast",
-    "A Leaner"
+    "A Learner"
   ];
   let pi = 0, ci = 0, deleting = false;
   function tickType(){

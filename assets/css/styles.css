@@ -29,6 +29,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #14173947; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg,rgba(206, 99, 255, 1) 0%, rgba(45, 191, 253, 1) 100%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(0deg,rgba(206, 99, 255, 0.66) 0%, rgba(45, 191, 253, 0.63) 100%);
+}
+
 a { color: var(--text); text-decoration: none; }
 a:hover { color: var(--accent); }
 
