@@ -63,8 +63,8 @@ nav { display: flex; justify-content: space-between; align-items: center; gap: 1
 .logo { font-weight: 800; letter-spacing: -0.01em; color: var(--text); font-size: 18px; }
 
 .nav-right { display: flex; align-items: center; gap: 10px; position: relative; }
-.OneB { gap: 0px;}
-.menu-btnB { background: #090e14; border: 1px solid var(--line); border-radius: 99px 99px 0px 0px; padding: 13px 14px; min-height: 36px; display: inline-flex; align-items: center; font-weight: 600; cursor: pointer; color: var(--text); transition: background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease); }
+.OneB { gap: 0px; display: flex;}
+.menu-btnB { background: #090e14; border: 1px solid var(--line); border-radius: 99px 0px 0px 99px; padding: 13px 14px; min-height: 36px; display: inline-flex; align-items: center; font-weight: 600; cursor: pointer; color: var(--text); transition: background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease); }
 .menu-btnB:hover, .menu-btn[aria-expanded="true"] { background: #0d1219; border-color: var(--line-2); color: var(--accent); }
 /* Mobile hamburger */
 .mobile-menu-btn { display: none; width: 42px; height: 36px; border: 1px solid var(--line-2); border-radius: 10px; background: #0d141d; color: var(--text); align-items: center; justify-content: center; cursor: pointer; }
