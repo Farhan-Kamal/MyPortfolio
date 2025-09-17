@@ -60,7 +60,7 @@ a:hover { color: var(--accent); }
 /* Header */
 header { position: fixed; inset: 0 0 auto 0; z-index: 1000; backdrop-filter: saturate(140%) blur(10px); background: var(--header-bg); border-bottom: 1px solid var(--line); }
 nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 0; }
-.logo { font-weight: 800; letter-spacing: -0.01em; color: var(--text); font-size: 18px; }
+.logo { font-weight: 800; letter-spacing: -0.01em; color: var(--text); font-size: 27px; }
 
 .nav-right { display: flex; align-items: center; gap: 10px; position: relative; }
 .OneB { gap: 0px; display: flex;}
@@ -196,7 +196,7 @@ body.no-scroll, html.no-scroll { overflow: hidden; }
 .award-item:last-child { border: none; padding-bottom: 0; }
 .education-timeline { position: relative; padding-left: 36px; }
 .education-timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 1px; background: var(--line-2); }
-.timeline-item { position: relative; margin-top: 28px; margin-bottom: 28px; }
+.timeline-item { position: relative; margin-top: 75px; margin-bottom: 28px; }
 .timeline-dot { position: absolute; left: -32px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #0b0d11; border: 2px solid var(--accent); box-shadow: 0 0 10px rgba(109,241,255,0.5); }
 
 /* Category pages + portfolio grid */
