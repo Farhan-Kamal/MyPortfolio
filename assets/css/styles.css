@@ -63,7 +63,9 @@ nav { display: flex; justify-content: space-between; align-items: center; gap: 1
 .logo { font-weight: 800; letter-spacing: -0.01em; color: var(--text); font-size: 18px; }
 
 .nav-right { display: flex; align-items: center; gap: 10px; position: relative; }
-
+.OneB { gap: 0px;}
+.menu-btnB { background: transparent; border: 1px solid var(--line); border-radius: 99px 99px 0px 0px; padding: 8px 14px; min-height: 36px; display: inline-flex; align-items: center; font-weight: 600; cursor: pointer; color: var(--text); transition: background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease); }
+.menu-btnB:hover, .menu-btn[aria-expanded="true"] { background: #0d1219; border-color: var(--line-2); color: var(--accent); }
 /* Mobile hamburger */
 .mobile-menu-btn { display: none; width: 42px; height: 36px; border: 1px solid var(--line-2); border-radius: 10px; background: #0d141d; color: var(--text); align-items: center; justify-content: center; cursor: pointer; }
 .mobile-menu-btn .bars { position: relative; width: 18px; height: 2px; background: currentColor; }
@@ -160,7 +162,7 @@ body.no-scroll, html.no-scroll { overflow: hidden; }
 .project-card:hover .project-arrow { transform: translateX(3px) rotate(-8deg); background: #0b1118; border-color: var(--accent); color: var(--accent); }
 
 .view-more-wrap { display: grid; place-items: center; margin-top: 22px; }
-.view-more-btn { background: #0d141d; color: var(--text); border: 1px solid var(--line-2); border-radius: var(--radius-sm); padding: 10px 16px; font-weight: 900; letter-spacing: .04em; cursor: pointer; transition: transform .15s var(--ease), background .2s, color .2s, border-color .2s; }
+.view-more-btn { background: #0d141d; color: var(--text); border: 1px solid var(--line-2); border-radius: var(--radius-sm); padding: 10px 16px; letter-spacing: .04em; cursor: pointer; transition: transform .15s var(--ease), background .2s, color .2s, border-color .2s; }
 .view-more-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
 
 /* Experience */
