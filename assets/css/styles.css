@@ -118,7 +118,7 @@ body.no-scroll, html.no-scroll { overflow: hidden; }
 .hero-heading { display: flex; flex-direction: column; gap: .18em; margin-bottom: 28px; }
 .hero-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; }
 .hero-hi, .hero-there, .hero-im { font-size: clamp(36px, 8vw, 88px); font-weight: 800; letter-spacing: -0.03em; color: var(--text); }
-.hero-name { overflow: clip; font-size: clamp(36px, 7vw, 76px); font-weight: 800; letter-spacing: -0.015em; }
+.hero-name { font-size: clamp(36px, 7vw, 76px); font-weight: 800; letter-spacing: -0.015em; text-align: left;}
 .typing-text { display: inline-block; position: relative; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 12px rgba(109,241,255,0.18), 0 0 22px rgba(255,61,241,0.12); }
 .typing-caret::after { content: '▌'; margin-left: 2px; color: var(--accent); animation: pulse 1s infinite; }
 @keyframes pulse { 0%,50%{opacity:1} 51%,100%{opacity:0} }
@@ -145,7 +145,7 @@ body.no-scroll, html.no-scroll { overflow: hidden; }
 /* Projects */
 .projects-section { padding: 56px 0; }
 .section-eyebrow { color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; }
-.section-title { font-size: clamp(28px, 5vw, 44px); font-weight: 900; letter-spacing: -0.02em; margin: 6px 0 18px; }
+.section-title { font-size: clamp(28px, 5vw, 44px); letter-spacing: -0.02em; margin: 6px 0 18px; }
 
 .projects-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
 .project-card { display: grid; grid-template-columns: 1fr; grid-column: span 6; border: 1px solid var(--line-2); background: #0e141c; transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-1); }
@@ -194,7 +194,7 @@ body.no-scroll, html.no-scroll { overflow: hidden; }
 .award-item:last-child { border: none; padding-bottom: 0; }
 .education-timeline { position: relative; padding-left: 36px; }
 .education-timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 1px; background: var(--line-2); }
-.timeline-item { position: relative; margin-bottom: 28px; }
+.timeline-item { position: relative; margin-top: 28px; margin-bottom: 28px; }
 .timeline-dot { position: absolute; left: -32px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #0b0d11; border: 2px solid var(--accent); box-shadow: 0 0 10px rgba(109,241,255,0.5); }
 
 /* Category pages + portfolio grid */
