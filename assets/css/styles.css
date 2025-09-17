@@ -30,7 +30,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -164,7 +164,7 @@ body.no-scroll, html.no-scroll { overflow: hidden; }
 .view-more-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
 
 /* Experience */
-.experience-section { padding: 56px 0; border-top: 1px solid var(--line); }
+.experience-section { padding: 56px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .experience-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 28px; align-items: start; }
 .experience-intro { padding: 8px 0; }
 .experience-description { color: var(--muted); }
@@ -195,7 +195,7 @@ body.no-scroll, html.no-scroll { overflow: hidden; }
 .education-timeline { position: relative; padding-left: 36px; }
 .education-timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 1px; background: var(--line-2); }
 .timeline-item { position: relative; margin-bottom: 28px; }
-.timeline-dot { position: absolute; left: 9px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #0b0d11; border: 2px solid var(--accent); box-shadow: 0 0 10px rgba(109,241,255,0.5); }
+.timeline-dot { position: absolute; left: -32px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #0b0d11; border: 2px solid var(--accent); box-shadow: 0 0 10px rgba(109,241,255,0.5); }
 
 /* Category pages + portfolio grid */
 .page-hero { padding: 88px 0 28px; text-align: center; border-bottom: 1px solid var(--line); }
